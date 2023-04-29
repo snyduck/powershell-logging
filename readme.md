@@ -7,6 +7,7 @@ A quick and simple text logging module for PowerShell, will be expanded on in th
 The following example initializes a new log that will be output to both the screen and a file.
 
 ```powershell
+    Import-Module "$env:userprofile\OneDrive\Dev\!powershell\Logging\Logging.psm1"
     Initialize-Log -OutputChannels @("Screen","File") -FilePath "$env:Userprofile\temp\log.txt"
     
     New-LogEntry -Severity "INFO" -Message "Throwing this out there"
@@ -15,3 +16,6 @@ The following example initializes a new log that will be output to both the scre
     
     Send-Log
 ```
+
+# TODO
+-Import into NuGet and properly install module.
